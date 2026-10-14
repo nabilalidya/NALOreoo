@@ -15,8 +15,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnMyProject.setOnClickListener {
-            val intent = Intent(this, DetailSnackActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, DetailSnackActivity::class.java))
+        }
+
+        binding.btnWebsite.setOnClickListener {
+            startActivity(Intent(this, WebActivity::class.java))
         }
     }
 }

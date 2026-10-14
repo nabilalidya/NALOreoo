@@ -12,5 +12,12 @@ class DetailSnackActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailSnackBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Mengaktifkan Toolbar & Tombol Back
+        setSupportActionBar(binding.toolbarDetail)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbarDetail.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 }

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvWelcomeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Halo, Nabila! 👋"
+        android:textColor="#0F2851"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelola bisnis kosmetik &amp; skincare kamu di SELLORA"
+        android:textColor="#888888"
+        android:textSize="13sp" />
+
+    <!-- Card Promo Diskon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#00A896"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diskon Mitra Baru! 🎉"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Gunakan kode SELLORA20 untuk potongan 20% pencatatan stok pertama!"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Layanan Utama"
+        android:textColor="#0F2851"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- Grid Layanan -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:text="💄 Pencatatan Penjualan"
+            android:textColor="#0F2851"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:text="📊 Insight Skincare"
+            android:textColor="#0F2851"
+            android:textStyle="bold" />
+    </GridLayout>
+
+    <!-- Tombol Bawah -->
+    <Button
+        android:id="@+id/btnInfoSellora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#00A896"
+        android:text="Info Sellora"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnProfilDeveloper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#0F2851"
+        android:text="Profil Developer"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#D90429"
+        android:text="Logout"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
