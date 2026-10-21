@@ -4,4 +4,6 @@
     <string name="snack_title">Oreo Original</string>
     <string name="snack_nutrition_title">Komposisi Gizi (per 28.5g):</string>
     <string name="snack_nutrition_desc">• Energi Total: 140 kcal\n• Lemak Total: 6g\n• Karbohidrat Total: 20g\n• Gula: 11g\n• Protein: 1g\n• Natrium: 90mg</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
