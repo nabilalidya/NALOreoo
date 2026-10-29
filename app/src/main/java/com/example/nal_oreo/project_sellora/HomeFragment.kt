@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.nal_oreo.R
-import com.example.nal_oreo.WebActivity
+import com.example.nal_oreo.WebActivity // IMPORT INI WAJIB DITAMBAHKAN
 
 class HomeFragment : Fragment() {
 
@@ -30,24 +30,23 @@ class HomeFragment : Fragment() {
         val btnProfilDeveloper = view.findViewById<Button>(R.id.btnProfilDeveloper)
         val btnLogout = view.findViewById<Button>(R.id.btnLogout)
 
-        // Mengambil username dari SharedPreferences
         val sharedPref = requireActivity().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
-        val username = sharedPref.getString("username", "nabila")
+        val username = sharedPref.getString("username", "Nabila")
 
-        tvWelcomeUser.text = "Halo, $username! 👋"
+        tvWelcomeUser?.text = "Halo, $username 👋"
 
-        // Tombol menuju Web
-        btnInfoSellora.setOnClickListener {
+        // Buka WebActivity
+        btnInfoSellora?.setOnClickListener {
             startActivity(Intent(requireContext(), WebActivity::class.java))
         }
 
-        // Tombol menuju Profil Developer
-        btnProfilDeveloper.setOnClickListener {
+        // Buka ProfileDeveloperActivity
+        btnProfilDeveloper?.setOnClickListener {
             startActivity(Intent(requireContext(), ProfileDeveloperActivity::class.java))
         }
 
-        // Tombol Logout
-        btnLogout.setOnClickListener {
+        // Logout
+        btnLogout?.setOnClickListener {
             val editor = sharedPref.edit()
             editor.clear()
             editor.apply()

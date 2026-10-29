@@ -48,6 +48,18 @@
             android:name=".WebActivity"
             android:exported="false" />
 
+        <!-- 7. RegisterActivity (Soal 1) -->
+        <activity
+            android:name=".project_sellora.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 8. VerificationActivity (Soal 2) -->
+        <activity
+            android:name=".project_sellora.VerificationActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>

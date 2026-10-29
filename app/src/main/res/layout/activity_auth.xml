@@ -53,4 +53,14 @@
         android:text="Masuk"
         android:textColor="#FFFFFF" />
 
+    <!-- Tombol Registrasi (Menyelesaikan Unresolved reference 'btnRegister') -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0F2851"
+        android:text="Belum Punya Akun? Daftar"
+        android:textColor="#FFFFFF" />
+
 </LinearLayout>

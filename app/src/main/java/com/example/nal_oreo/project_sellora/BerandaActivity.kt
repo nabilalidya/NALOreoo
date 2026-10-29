@@ -1,5 +1,6 @@
 package com.example.nal_oreo.project_sellora
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -29,7 +30,9 @@ class BerandaActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_profile -> {
-                    replaceFragment(ProfileFragment())
+                    // LANGSUNG BUKAN PROFILE DEVELOPER ACTIVITY SAAT ICON PROFIL DIKLIK
+                    val intent = Intent(this, ProfileDeveloperActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 else -> false
