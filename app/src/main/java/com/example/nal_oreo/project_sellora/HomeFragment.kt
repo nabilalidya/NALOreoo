@@ -7,10 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ListView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.nal_oreo.R
-import com.example.nal_oreo.WebActivity // IMPORT INI WAJIB DITAMBAHKAN
+import com.example.nal_oreo.WebActivity
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +28,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val tvWelcomeUser = view.findViewById<TextView>(R.id.tvWelcomeUser)
+        val lvTransaksiTerbaru = view.findViewById<ListView>(R.id.lvTransaksiTerbaru)
         val btnInfoSellora = view.findViewById<Button>(R.id.btnInfoSellora)
         val btnProfilDeveloper = view.findViewById<Button>(R.id.btnProfilDeveloper)
         val btnLogout = view.findViewById<Button>(R.id.btnLogout)
@@ -34,6 +37,20 @@ class HomeFragment : Fragment() {
         val username = sharedPref.getString("username", "Nabila")
 
         tvWelcomeUser?.text = "Halo, $username 👋"
+
+        // Terapkan CustomAdapter ke ListView
+        val dataTransaksi = listOf(
+            TransaksiModel("Order #SLR-104", "Glow Serum Vitamin C (2x) • Selesai", "+Rp240.000"),
+            TransaksiModel("Order #SLR-103", "Matte Lip Cream Rose (1x) • Dikirim", "+Rp75.000"),
+            TransaksiModel("Order #SLR-102", "Hydrating Sunscreen SPF 50 • Selesai", "+Rp95.000")
+        )
+        val customAdapter = TransaksiAdapter(requireContext(), dataTransaksi)
+        lvTransaksiTerbaru?.adapter = customAdapter
+
+        lvTransaksiTerbaru?.setOnItemClickListener { _, _, position, _ ->
+            val terpilih = dataTransaksi[position]
+            Toast.makeText(requireContext(), "${terpilih.kodeOrder}: ${terpilih.nominal}", Toast.LENGTH_SHORT).show()
+        }
 
         // Buka WebActivity
         btnInfoSellora?.setOnClickListener {
