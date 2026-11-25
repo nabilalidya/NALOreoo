@@ -48,7 +48,7 @@
                 android:src="@drawable/ic_sellora_logo" />
         </RelativeLayout>
 
-        <!-- Card Total Penjualan dengan Background Drawable -->
+        <!-- Card Total Penjualan -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -235,15 +235,35 @@
 
         </GridLayout>
 
-        <!-- CustomAdapter: ListView Transaksi Terbaru -->
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Header & Tombol Tambah Transaksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Transaksi Terbaru"
-            android:textColor="#0F2851"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Transaksi Terbaru (Klik: Edit/Hapus)"
+                android:textColor="#0F2851"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddTransaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="#00A896"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="+ Order"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
 
         <ListView
             android:id="@+id/lvTransaksiTerbaru"

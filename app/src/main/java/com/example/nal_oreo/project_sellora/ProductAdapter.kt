@@ -6,16 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nal_oreo.R
-
-data class ProductSellora(
-    val name: String,
-    val stock: String,
-    val price: String
-)
+import com.example.nal_oreo.data.ProductModel
 
 class ProductAdapter(
-    private var productList: List<ProductSellora>,
-    private val onItemClick: (ProductSellora) -> Unit
+    private var productList: List<ProductModel>,
+    private val onItemClick: (ProductModel) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     inner class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -40,8 +35,8 @@ class ProductAdapter(
 
     override fun getItemCount(): Int = productList.size
 
-    fun filterList(filtered: List<ProductSellora>) {
-        productList = filtered
+    fun updateData(newList: List<ProductModel>) {
+        productList = newList
         notifyDataSetChanged()
     }
 }

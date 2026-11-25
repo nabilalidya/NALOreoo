@@ -7,21 +7,21 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.nal_oreo.R
-
-data class TransaksiModel(
-    val kodeOrder: String,
-    val detail: String,
-    val nominal: String
-)
+import com.example.nal_oreo.data.TransaksiSupabaseModel
 
 class TransaksiAdapter(
     private val context: Context,
-    private val listTransaksi: List<TransaksiModel>
+    private var listTransaksi: List<TransaksiSupabaseModel>
 ) : BaseAdapter() {
 
     override fun getCount(): Int = listTransaksi.size
     override fun getItem(position: Int): Any = listTransaksi[position]
-    override fun getItemId(position: Int): Long = position.toLong()
+    override fun getItemId(position: Int): Long = listTransaksi[position].id ?: position.toLong()
+
+    fun updateData(newList: List<TransaksiSupabaseModel>) {
+        listTransaksi = newList
+        notifyDataSetChanged()
+    }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view = convertView ?: LayoutInflater.from(context)

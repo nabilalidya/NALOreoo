@@ -31,8 +31,8 @@ class OnboardingActivity : AppCompatActivity() {
             R.drawable.ic_sellora_logo
         ),
         OnboardItem(
-            "Tingkatkan Omzet Bisnismu",
-            "Analisis tren pelanggan aktif dan kembangkan bisnis UMKM kamu bersama Sellora.",
+            "Tingkatkan Omzet Toko Skincare",
+            "Analisis tren pelanggan aktif dan kembangkan penjualan produk skincare & kecantikan kamu bersama Sellora.",
             R.drawable.ic_sellora_logo
         )
     )
